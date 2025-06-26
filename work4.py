@@ -3,7 +3,6 @@ import tempfile
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from openai import OpenAI
-from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader, PyPDFLoader, Docx2txtLoader
 
 # 初始化ChatOpenAI模型
@@ -11,7 +10,7 @@ model = ChatOpenAI(
     base_url='https://api.deepseek.com/',
     model='deepseek-reasoner',
     temperature=0,
-    api_key=st.secrets["OPENAI_API_KEY"]  # 修改为使用st.secrets
+    api_key=st.secrets["OPENAI_API_KEY"]  
 )
 
 def get_answer(question: str, strict_file_mode: bool = False):
