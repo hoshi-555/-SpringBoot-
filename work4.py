@@ -38,7 +38,7 @@ def get_answer(question: str, strict_file_mode: bool = False):
             model='deepseek-reasoner',
             messages=messages,
             temperature=0,
-            max_tokens=1024
+            max_tokens=2048
         )
 
         return response.choices[0].message.content
