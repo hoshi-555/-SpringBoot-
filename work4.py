@@ -119,7 +119,7 @@ with st.sidebar:
                 st.session_state['file_content'] = ""
             else:
                 st.session_state['file_content'] = file_content
-                st.success(""✅文件解析完成！")
+                st.success("✅文件解析完成！")
                 st.text_area("📝 文件内容预览",
                              value=file_content[:1000] + ("..." if len(file_content) > 1000 else ""),
                              height=200)
